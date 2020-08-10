@@ -10,8 +10,9 @@
 	"scripts": {
 		"build": "tsc",
 		"prepare": "npm run build",
-		"version": "git add -A src",
-		"postversion": "git push && git push --tags"
+		"version": "npm run test && git add -A src",
+		"postversion": "git push && git push --tags",
+		"test": "node test/index.js"
 	},
 	"devDependencies": {
 		"@types/node": "^14.0.23",
@@ -22,7 +23,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "precise-commits"
+			"pre-commit": "precise-commits && npm run test"
 		}
 	},
 	"directories": {
