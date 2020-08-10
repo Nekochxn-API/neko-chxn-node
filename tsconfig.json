@@ -14,7 +14,8 @@
 		"lib": ["ES6"],
 		"module": "commonjs",
 		"target": "ES6",
-		"declaration": true
+		"declaration": true,
+		"removeComments": false
 	},
 	"include": ["src/**/*.ts"]
 }
