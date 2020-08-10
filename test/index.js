@@ -8,6 +8,7 @@ const test = async (description, fn) => {
 	} catch (error) {
 		console.error(`FAIL: ${description}`);
 		success = false;
+		throw error;
 	}
 };
 
