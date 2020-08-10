@@ -109,7 +109,7 @@ class NekoChxn {
 }
 
 export interface ApiImageResponse {
-	URL: string;
+	url: string;
 }
 export type ApiImageFetch = (url: string) => Promise<ApiImageResponse>;
 export type ApiImageEndpoints = keyof NekoChxn;
