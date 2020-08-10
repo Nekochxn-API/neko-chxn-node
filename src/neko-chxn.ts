@@ -51,3 +51,4 @@ export type ApiImageFetch = (url: string) => Promise<ApiImageResponse>;
 export type ApiImageEndpoints = keyof NekoChxn;
 
 export default new NekoChxn();
+module.exports = new NekoChxn();
