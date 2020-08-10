@@ -3,6 +3,7 @@ import { get } from 'https';
 class NekoChxn {
 	private readonly baseUrl = 'https://api.neko-chxn.xyz/V1/';
 
+	public readonly version: string = require('../package.json').version;
 	/**
 	 * Get a blush gif
 	 * @returns {Promise<ApiImageResponse>}
