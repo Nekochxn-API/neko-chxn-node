@@ -1,90 +1,90 @@
 import { get } from 'https';
 
 class NekoChxn {
-	private readonly baseUrl = 'https://api.neko-chxn.xyz/v1/';
+	private readonly _baseUrl = 'https://api.neko-chxn.xyz/v1/';
 
 	public readonly version: string = require('../package.json').version;
 	/**
 	 * Get a blush gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public blush = () => this.fetch('blush/img');
+	public blush = () => this._fetch('blush/img');
 
 	/**
 	 * Get a cry gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public cry = () => this.fetch('cry/img');
+	public cry = () => this._fetch('cry/img');
 
 	/**
 	 * Get a cuddle gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public cuddle = () => this.fetch('cuddle/img');
+	public cuddle = () => this._fetch('cuddle/img');
 
 	/**
 	 * Get a dance gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public dance = () => this.fetch('dance/img');
+	public dance = () => this._fetch('dance/img');
 
 	/**
 	 * Get a hug gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public hug = () => this.fetch('hug/img');
+	public hug = () => this._fetch('hug/img');
 
 	/**
 	 * Get a kick gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public kick = () => this.fetch('kick/img');
+	public kick = () => this._fetch('kick/img');
 
 	/**
 	 * Get a kiss gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public kiss = () => this.fetch('kiss/img');
+	public kiss = () => this._fetch('kiss/img');
 
 	/**
 	 * Get a love gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public love = () => this.fetch('love/img');
+	public love = () => this._fetch('love/img');
 
 	/**
 	 * Get a pat gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public pat = () => this.fetch('pat/img');
+	public pat = () => this._fetch('pat/img');
 
 	/**
 	 * Get a punch gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public punch = () => this.fetch('punch/img');
+	public punch = () => this._fetch('punch/img');
 
 	/**
 	 * Get a smirk gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public smirk = () => this.fetch('smirk/img');
+	public smirk = () => this._fetch('smirk/img');
 
 	/**
 	 * Get a tickle gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public tickle = () => this.fetch('tickle/img');
+	public tickle = () => this._fetch('tickle/img');
 
 	/**
 	 * Get a yell gif
 	 * @returns {Promise<ApiImageResponse>}
 	 */
-	public yell = () => this.fetch('yell/img');
+	public yell = () => this._fetch('yell/img');
 
-	private fetch(endpoint: string): Promise<ApiImageResponse> {
+	private _fetch(endpoint: string): Promise<ApiImageResponse> {
 		return new Promise((resolve, reject) => {
-			get(this.baseUrl + endpoint, res => {
+			get(this._baseUrl + endpoint, res => {
 				if (!res.statusCode || res.statusCode > 299 || res.statusCode < 200) {
 					res.resume();
 					reject(`Error while fetching Neko-Chxn: ${res.statusCode} - ${res.statusMessage ?? 'Unknown error while fetching Neko-Chxn'}`);
