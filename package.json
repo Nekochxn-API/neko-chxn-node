@@ -1,10 +1,10 @@
 {
 	"name": "neko-chxn",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "neko-chxn api wrapper",
 	"main": "lib/neko-chxn.js",
 	"types": "lib/neko-chxn.d.ts",
-	"author": "VenNeptury <sgtmattis@gmail.com>",
+	"author": "VenNeptury <sgtmattis@gmail.com> Mei-chan <support@neko-chxn.xyz>",
 	"license": "GPL-3.0",
 	"private": false,
 	"scripts": {

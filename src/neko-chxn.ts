@@ -82,6 +82,131 @@ class NekoChxn {
 	 */
 	public yell = () => this._fetch('yell/img');
 
+	 /**
+	 * Get a look gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public look = () => this._fetch('/look/img');
+
+	 /**
+	 * Get a laugh gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public laugh = () => this._fetch('/laugh/img');
+
+	/**
+	 * Get a laugh gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public bored = () => this._fetch('/bored/img');
+	
+	/**
+	 * Get a nervous gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public nervous = () => this._fetch('/nervous/img');
+		
+	/**
+	 * Get a dab gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public dab = () => this._fetch('/dab/img');
+		
+	/**
+	 * Get a angry gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public angry = () => this._fetch('/angry/img');
+		
+	/**
+	 * Get a wave gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public wave = () => this._fetch('/wave/img');
+		
+	/**
+	 * Get a annoy gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public annoy = () => this._fetch('/annoy/img');
+		
+	/**
+	 * Get a bite gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public bite = () => this._fetch('/bite/img');
+			
+	/**
+	 * Get a coslpay gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public coslpay = () => this._fetch('/coslpay/img');
+			
+	/**
+	 * Get a eat gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public eat = () => this._fetch('/eat/img');
+			
+	/**
+	 * Get a feed gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public feed = () => this._fetch('/feed/img');
+			
+	/**
+	 * Get a faceplam gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public faceplam = () => this._fetch('/faceplam/img');
+			
+	/**
+	 * Get a happy gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public happy = () => this._fetch('/happy/img');
+			
+	/**
+	 * Get a jump gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public jump = () => this._fetch('/jump/img');			
+	/**
+	 * Get a kill gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public kill = () => this._fetch('/kill/img');			
+	/**
+	 * Get a lick gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public lick = () => this._fetch('/lick/img');
+				
+	/**
+	 * Get a poke gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public poke = () => this._fetch('/poke/img');
+				
+	/**
+	 * Get a pout gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public pout = () => this._fetch('/pout/img');
+					
+	/**
+	 * Get a sleep gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public sleep = () => this._fetch('/sleep/img');
+					
+	/**
+	 * Get a pout gif
+	 * @returns {Promise<ApiImageResponse>}
+	 */
+	public vtuber = () => this._fetch('/vtuber/img');
+					
+
 	private _fetch(endpoint: string): Promise<ApiImageResponse> {
 		return new Promise((resolve, reject) => {
 			get(this._baseUrl + endpoint, res => {
